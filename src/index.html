@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body style="overflow: hidden; background-color: rgba(0,0,0,0); margin: 0" >
+  <div id="App"></div>
+  <!-- <input id="elem" type="button" value="Нажми меня" />
+  <script>
+     elem.addEventListener( "click" , function() {alert('Спасибо!')});
+    // elem.onclick = function() {
+    //   alert( 'Спасибо' );
+    // };
+  </script>
+   -->
+</body>
+<script src="listen.js"></script>
+<script type="text/jsx">
+
+  
+  
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {AppContainer} from 'react-hot-loader';
+
+const render = () => {
+  const App = require('./app').default;
+  ReactDOM.render(<AppContainer><App /></AppContainer>, document.getElementById('App'));
+}
+
+render();
+if (module.hot) {
+  module.hot.accept(render);
+}
+</script>
+
+</html>
