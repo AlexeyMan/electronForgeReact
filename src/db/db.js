@@ -2,10 +2,10 @@
 // import { sendMessWind } from './transfer';
 
 const Datastore = require('nedb');
-const Dev = require('./configDev');
+const Dev = require('../config/configDev');
 // const jsfile = require('jsonfile');
 // const trans = require('./transfer');
-const sendMessWind = require('./render').sendMessWind;
+const sendMessWind = require('../server/render').sendMessWind;
 
 // ssWind();
 

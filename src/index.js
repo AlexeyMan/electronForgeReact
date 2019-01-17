@@ -1,9 +1,9 @@
 import { app, BrowserWindow } from 'electron';
 import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer';
 import { enableLiveReload } from 'electron-compile';
-import './transfer';
-import './server';
-import { channelWind } from './render';
+import './server/transfer';
+import './server/server';
+import { channelWind } from './server/render';
 
 // import { con } from './config';
 

@@ -2,9 +2,9 @@
 // const jsonfile = require('jsonfile');
 const ModbusRTU = require('modbus-serial');
 const unPack = require('./unPack');
-const db = require('./db');
-const con = require('./config');
-const Dev = require('./configDev');
+const db = require('../db/db');
+const con = require('../config/config');
+const Dev = require('../config/configDev');
 
 // const fs = require('fs');
 

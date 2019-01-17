@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { ipcRenderer } from 'electron';
+import Button from '@material-ui/core/Button';
+
 // const sendMes = require('./transfer');
 
 class test extends Component {
@@ -25,8 +27,8 @@ class test extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.okClick}>connect</button>
-        <button onClick={this.desClick}>desconnect</button>
+        <Button variant="contained" color="primary" onClick={this.okClick}>connect</Button>
+        <Button onClick={this.desClick}>desconnect</Button>
         <div id="p_oil1">send</div>
         <div id="p_oil4">send</div>
         <div id="RPM5">send</div>
