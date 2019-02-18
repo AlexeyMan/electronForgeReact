@@ -13,6 +13,13 @@
       }
     }());
   </script>
+  <link rel="stylesheet" href="./css/station.css" />
+  <link rel="stylesheet" href="./css/pageMessage.css" />
+  <link rel="stylesheet" href="./css/tableMess.css" />
+
+  <link rel="stylesheet" href="./css/tabulator_bootstrap4.css" />
+  
+
 </head>
 <body>
   <div id="App"></div>
@@ -31,10 +38,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {AppContainer} from 'react-hot-loader';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+import reducer from './render/reducers';
+
+const store = createStore(reducer);
+
 
 const render = () => {
   const App = require('./render/app').default;
-  ReactDOM.render(<AppContainer><App /></AppContainer>, document.getElementById('App'));
+  ReactDOM.render(<AppContainer><Provider store={store}><App /></Provider></AppContainer>, document.getElementById('App'));
 }
 
 render();

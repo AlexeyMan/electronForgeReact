@@ -5,6 +5,7 @@ import './server/transfer';
 import './server/server';
 import { channelWind } from './server/render';
 
+
 // import { con } from './config';
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -25,7 +26,8 @@ const isDevMode = process.execPath.match(/[\\/]electron/);
 if (isDevMode) enableLiveReload({ strategy: 'react-hmr' });
 
 const createWindow = async () => {
-  // let win = new BrowserWindow({ width: 200, height: 300, frame: true, parent: mainWindow, modal: true, show: false });
+  // let win = new BrowserWindow({
+  // width: 200, height: 300, frame: true, parent: mainWindow, modal: true, show: false });
   // win.on('closed', () => {
   //   win = null;
   // });

@@ -1,13 +1,31 @@
 const dev = {
   PW: [
     {
-      startAddres: '2',
+      startAddres: '1',
+      Nregistrs: '2',
+      functionQuery: 3,
+      pacet: [
+        {
+          startRegistr: 1,
+          name: 'viewFT',
+          description: 'Частота ЧП',
+          unit: 'Гц',
+          convertVal: 'readInt16LE',
+          relation: 'convertData * 2',
+          range: '100,100',
+          history: '1',
+          data: [],
+        },
+      ],
+    },
+    {
+      startAddres: '50',
       Nregistrs: '8',
       functionQuery: 3,
       pacet: [
         {
           startRegistr: 1,
-          name: 'p_oil1',
+          name: 'p_oil1555555',
           description: 'Давление масла',
           unit: 'Bar',
           convertVal: 'readInt16LE',

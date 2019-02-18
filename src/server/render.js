@@ -21,19 +21,19 @@ function channelWind(mW) {
 }
 
 function sendMessWind(id, name, dataVal) {
+//   var base2 = (123).toString(2); // делаем массив бит из числа
+//   var sss = base2[0];
+//   console.log(sss);
+//   var a = 22;
+//   var b = [];
+
+// for (var i = 0; i < 32; i++)
+//   b[i] = (a >> i) & 1;
+
+//   console.log(b);
   mainWindow.webContents.send('SEND_DATA_REACT', { id, name, dataVal });
 }
-// function ssWind() {
-//  console.log('Yessssss');
-// }
-// mainWindow.webContents.on('did-finish-load', () => {
-//   mainWindow.webContents.send('ping', 'whoooooooh!');
-// });
-// ipcMain.on('synchronous-message', (event, arg) => {
-//   console.log(arg); // prints "ping"
-//   event.returnValue = 'pong';
-// })
-// ;
+
 module.exports = {
   sendMessWind,
   channelWind,

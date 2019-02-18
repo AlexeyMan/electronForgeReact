@@ -1,0 +1,89 @@
+.qqq {
+  color: green;
+  font-size: 20px;
+}
+.mainStation {
+  margin-top: 10px;
+  height: 350px;
+}
+.mainStation .wrapPump {
+  float: left;
+  position: relative;
+  margin: auto;
+  width: 155px;
+  height: 340px;
+}
+.mainStation .wrapPump .imgPump {
+  position: absolute;
+  /* top: 0; */
+  margin: auto;
+  z-index: 3;
+}
+.mainStation .wrapPump .imgPumpRezerv {
+  position: absolute;
+  top: -8px;
+  left: 15px;
+  margin: auto;
+  z-index: 2;
+}
+.mainStation .wrapPump .imgPumpRun {
+  z-index: 6;
+  position: absolute;
+  right: 30px;
+  top: -9px;
+}
+.mainStation .wrapPump .imgPumpAlarm {
+  z-index: 7;
+  position: absolute;
+  right: 30px;
+  top: -9px;
+}
+.mainStation .wrapPump .viewFT {
+  background-color: #004D4D;
+  padding: 4px;
+  position: absolute;
+  width: 44px;
+  height: 20px;
+  top: 0px;
+  bottom: 105px;
+  left: 36px;
+  margin: auto;
+  z-index: 3;
+  border-radius: 5px;
+  color: coral;
+}
+.mainStation .wrapPump .viewFT span {
+  color: coral;
+}
+.mainStation .wrapPump .imgPipUp {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  height: 25px;
+  width: 100%;
+}
+.mainStation .wrapPump .imgPipDown {
+  position: absolute;
+  /* top: 0; */
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 25px;
+  width: 100%;
+}
+.mainStation .wrapPump .imgPipRunDown {
+  bottom: 5px;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+}
+.mainStation .wrapPump .imgPipRunUp {
+  position: absolute;
+  z-index: 2;
+  top: 79px;
+  bottom: 0px;
+  margin: auto;
+  width: 100%;
+}
