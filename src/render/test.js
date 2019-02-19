@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ipcRenderer } from 'electron';
 // const sendMes = require('./transfer');
 import Button from '@material-ui/core/Button';
+import { connect } from 'react-redux';
 
 class test extends Component {
   constructor(props) {
@@ -39,4 +40,7 @@ class test extends Component {
   }
 }
 
-export default test;
+export default connect(
+  state => ({ state }),
+  dispatch => ({ dispatch }),
+)(test);

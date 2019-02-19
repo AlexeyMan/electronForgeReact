@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-bitwise */
 const rend = require('electron').ipcRenderer;
-const alarmMess = require('./config/alarmMess');
+// const alarmMess = require('./config/alarmMess');
 
-console.log(alarmMess);
+// console.log(alarmMess);
 rend.on('SEND_DATA_REACT', (event, message) => {
   if (message.name === 'viewFT') { // обработка байтов
     const a = message.dataVal;

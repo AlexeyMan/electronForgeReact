@@ -16,7 +16,7 @@ import PageMessage from './pageMessage';
 
 export class App extends React.Component {
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <div>
         <AppMenu />
@@ -30,7 +30,7 @@ export class App extends React.Component {
 }
 
 export default connect(
-  state => ({ state }), 
+  state => ({ state }),
   dispatch => ({ dispatch }),
 )(App);
 // import { createStore } from 'redux';
@@ -52,3 +52,4 @@ export default connect(
 // });
 
 // store.dispatch({ type: 'ADD_TR', payload: 'Smells like spirit' });
+

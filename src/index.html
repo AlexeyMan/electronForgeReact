@@ -31,19 +31,19 @@
      };
   </script>-->
 </body>
-<script src="./render/listen.js"></script>
+<!-- <script src="./render/listen.js"></script> -->
 <script type="text/jsx">
 
   
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {AppContainer} from 'react-hot-loader';
-import { createStore } from 'redux';
+import createStore from './store';
 import { Provider } from 'react-redux';
 
 import reducer from './render/reducers';
 
-const store = createStore(reducer);
+const store = createStore;
 
 
 const render = () => {
