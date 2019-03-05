@@ -31,7 +31,7 @@
      };
   </script>-->
 </body>
-<!-- <script src="./render/listen.js"></script> -->
+<!-- <script src="./render/listen1.js"></script> -->
 <script type="text/jsx">
 
   
@@ -42,12 +42,12 @@ import createStore from './store';
 import { Provider } from 'react-redux';
 
 import reducer from './render/reducers';
-
+const App = require('./render/app').default;
 const store = createStore;
 
 
 const render = () => {
-  const App = require('./render/app').default;
+  
   ReactDOM.render(<AppContainer><Provider store={store}><App /></Provider></AppContainer>, document.getElementById('App'));
 }
 

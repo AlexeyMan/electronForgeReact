@@ -7,7 +7,7 @@ const dev = {
       pacet: [
         {
           startRegistr: 1,
-          name: 'viewFT',
+          name: 'alarm_0',
           description: 'Частота ЧП',
           unit: 'Гц',
           convertVal: 'readInt16LE',
@@ -56,7 +56,7 @@ const dev = {
       functionQuery: 3,
       pacet: [
         {
-          name: 'p_oil4',
+          name: 'alarm_1',
           convertVal: 'readInt16LE',
           startRegistr: 1,
           description: 'Давление масла',
