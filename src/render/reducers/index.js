@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 
-import alarmMess from './alarmMess';
+import addMess from './addMess';
+// import updMess from './updMess';
 import curData from './curData';
 
 export default combineReducers({
-  alarmMess,
+  addMess,
+  // updMess,
   curData,
 })
 ;

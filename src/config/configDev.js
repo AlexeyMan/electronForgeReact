@@ -56,7 +56,7 @@ const dev = {
       functionQuery: 3,
       pacet: [
         {
-          name: 'alarm_1',
+          name: 'alarm_2',
           convertVal: 'readInt16LE',
           startRegistr: 1,
           description: 'Давление масла',

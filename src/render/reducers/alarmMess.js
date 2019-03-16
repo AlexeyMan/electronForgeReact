@@ -13,7 +13,7 @@ export default function message(state = initialState, action) {
 
     //   alarm001: true,
   } else if (action.type === 'ACT_MESS') {
-    const akt = action.payload.actMess;
+    // const akt = action.payload.actMess;
     const id = action.payload.id;
     let index;
     const val = state.find((exp, i) => {
@@ -24,9 +24,9 @@ export default function message(state = initialState, action) {
     });
     if (val) {
       // val[0].actMess = akt;
-      state[index].actMess = akt;
+      // state[index].actMess = false;
       console.log('act', index, val, state);
-      return state;
+      return [...state, state[index].actMess = false];
     }
     // const val = state;
     // const aaa = () => { return state.find(exp => exp.id === id); };

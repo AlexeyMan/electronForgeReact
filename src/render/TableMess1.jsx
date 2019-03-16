@@ -8,7 +8,7 @@ import './listen1';
 
 
 const columns = [
-  { title: 'id', field: 'id', width: 30, minWidth: 31 },
+  { title: 'id', field: 'nomer', width: 30, minWidth: 31 },
   { title: 'Акт', field: 'actMess', align: 'center', formatter: 'tickCross', width: 50, minWidth: 30, sorter: 'number' },
   { title: 'Дата', field: 'date', align: 'center', width: 110 },
   { title: 'Время', field: 'time', align: 'center', width: 110 },
@@ -18,63 +18,91 @@ const columns = [
 ];
 
 const data = [
-  { id: 1, actMess: true, date: '23.02.2019', time: '10.23.45', date2: '23.02.2019', time2: '10.23.45', name: 'Oli Bob'},
-  { id: 1, actMess: true, date: '23.02.2040', time: '10.23.45', date2: '23.02.2019', time2: '10.23.45', name: 'Oli Bob', age: '12', col: 'red', dob: '', rating: 4.5, passed: true },
-  { id: 1, actMess: true, date: '23.02.2030', time: '10.23.45', date2: '23.02.2019', time2: '10.23.45', name: 'Oli Bob', age: '12', col: 'red', dob: '', rating: 4.5, passed: true },
-  { id: 2, actMess: true, date: '23.02.2040', time: '10.23.45', date2: '23.02.2019', time2: '10.23.45', name: 'Mary May', age: '1', col: 'blue', dob: '14/05/1982', rating: 2.5, passed: true },
-  { id: 3, actMess: true, date: '23.02.2019', time: '10.23.45', date2: '23.02.2019', time2: '10.23.45', name: 'Christine Lobowski', age: '42', col: 'green', dob: '22/05/1982' },
-  { id: 4, actMess: true, name: 'Brendon Philips', age: '125', date2: '23.02.2019', time2: '10.23.45', col: 'orange', dob: '01/08/1980' },
-  { id: 5, actMess: true, date: '23.02.2019', time: '10.23.45', date2: '23.02.2019', time2: '10.23.45', name: 'Авария 1', kvit: false, active: false },
-  { id: 6, actMess: true, date: '23.02.2019', time: '10.23.45', date2: '23.02.2019', time2: '10.23.45', name: 'Авария 1', kvit: false, active: false },
-  { id: 7, actMess: true, date: '23.02.2019', time: '10.23.45', date2: '23.02.2019', time2: '10.23.45', name: 'Авария 1', kvit: false, active: false },
-  { id: 8, actMess: true, date: '23.02.2019', time: '10.23.45', date2: '23.02.2019', time2: '10.23.45', name: 'Авария 1', kvit: false, active: false },
-  { id: 9, actMess: true, date: '23.02.2019', time: '10.23.45', date2: '23.02.2019', time2: '10.23.45', name: 'Авария 1', kvit: false, active: false },
-  { id: 10, actMess: true, date: '23.02.2019', time: '10.23.45', date2: '23.02.2019', time2: '10.23.45', name: 'Авария 1', kvit: false, active: false },
-  { id: 11, actMess: true, date: '23.02.2019', time: '10.23.45', name: 'Авария 1', kvit: false, active: false },
-  { id: 12, actMess: true, date: '23.02.2019', time: '10.23.45', name: 'Авария 1', kvit: false, active: false },
-  { id: 13, actMess: true, date: '23.02.2019', time: '10.23.45', name: 'Авария 1', kvit: false, active: false },
-  { id: 14, actMess: true, date: '23.02.2019', time: '10.23.45', name: 'Авария 1', kvit: false, active: false },
-  { id: 15, actMess: true, date: '23.02.2019', time: '10.23.45', name: 'Авария 1', kvit: false, active: false },
+  { id: 0, nomer: 1, actMess: true, date: '23.02.2030', time: '10.23.45', date2: '', time2: '', name: 'Oli Bob', age: '12', col: 'red', dob: '', rating: 4.5, passed: true },
+  { id: 0, nomer: 2, actMess: true, date: '23.02.2040', time: '10.23.45', date2: '23.02.2019', time2: '', name: 'Mary May', age: '1', col: 'blue', dob: '14/05/1982', rating: 2.5, passed: true },
+  { id: 0, nomer: 3, actMess: true, date: '23.02.2019', time: '10.23.45', date2: '23.02.2019', time2: '', name: 'Christine Lobowski', age: '42', col: 'green', dob: '22/05/1982' },
+  { id: 0, nomer: 4, actMess: true, name: 'Brendon Philips', age: '125', date2: '23.02.2019', time2: '', col: 'orange', dob: '01/08/1980' },
+  { id: 0, nomer: 5, actMess: true, date: '23.02.2019', time: '10.23.45', date2: '23.02.2019', time2: '', name: 'Авария 1', kvit: false, active: false },
+  { id: 0, nomer: 6, actMess: true, date: '23.02.2019', time: '10.23.45', date2: '23.02.2019', time2: '', name: 'Авария 1', kvit: false, active: false },
+  { id: 0, nomer: 7, actMess: true, date: '23.02.2019', time: '10.23.45', date2: '23.02.2019', time2: '', name: 'Авария 1', kvit: false, active: false },
+  { id: 0, nomer: 8, actMess: true, date: '23.02.2019', time: '10.23.45', date2: '23.02.2019', time2: '', name: 'Авария 1', kvit: false, active: false },
+  { id: 0, nomer: 9, actMess: true, date: '23.02.2019', time: '10.23.45', date2: '23.02.2019', time2: '', name: 'Авария 1', kvit: false, active: false },
+  { id: 0, nomer: 10, actMess: true, date: '23.02.2019', time: '10.23.45', date2: '23.02.2019', time2: '', name: 'Авария 1', kvit: false, active: false },
+  { id: 0, nomer: 11, actMess: true, date: '23.02.2019', time: '10.23.45', name: 'Авария 1', kvit: false, active: false },
+  { id: 0, nomer: 12, actMess: true, date: '23.02.2019', time: '10.23.45', name: 'Авария 1', kvit: false, active: false },
+  { id: 0, nomer: 13, actMess: true, date: '23.02.2019', time: '10.23.45', name: 'Авария 1', kvit: false, active: false },
+  { id: 0, nomer: 14, actMess: true, date: '23.02.2019', time: '10.23.45', name: 'Авария 1', kvit: false, active: false },
+  { id: 0, nomer: 15, actMess: true, date: '23.02.2019', time: '10.23.45', name: 'Авария 1', kvit: false, active: false },
 ];
+const dataTable = [];
+
 let onData;
 // let messT=[];
-const newDate = () => {
+const newDate = (i) => {
   const now = new Date();
-  const MyDateString = (`0${now.getDate()}`).slice(-2) + '/' +
-    (`0${now.getMonth()}${1}`).slice(-2) + '/'
-   + now.getFullYear();
-  const MyTimeString = (`0${now.getHours()}`).slice(-2) + ':' +
-  (`0${now.getMinutes()}`).slice(-2) + ':' +
-  (`0${now.getSeconds()}`).slice(-2);
+  const MyDateString = `${(`0${now.getDate()}`).slice(-2)}/${
+    (`0${now.getMonth() + 1}`).slice(-2)}/${
+    now.getFullYear()}`;
+  const MyTimeString = `${(`0${now.getHours()}`).slice(-2)}:${
+  (`0${now.getMinutes()}`).slice(-2)}:${
+  (`0${now.getSeconds()}`).slice(-2)}`;
+  // console.log(MyDateString);
   // data[i].actMess = true;
   // data[i].date = `${MyDateString}`;
   // data[i].time = `${MyTimeString}`;
-  return [MyDateString, MyTimeString];
+  return [MyDateString, MyTimeString]; // data[i];
 };
-export const upDate = (row) => {
-  const rows = onData.getData();
-  const qwer = rows.find(item => item.id === row.id); // ищем объект по ID
-  qwer.actMess = false;
-  const dateAll = newDate();
-  // console.log('allll', dateAll);
-  qwer.date2 = dateAll[0];
-  qwer.time2 = dateAll[1];
-  onData.updateData([qwer]);
-  console.log('addUp', row, rows, qwer);
+export const upDate = (nomer) => {
+  // const rowsTable = onData.getData();
+  // const qwer = dataTable.filter(item => item.actMess === true); // ищем активные объекты
+  // const row = qwer.find(item => item.nomer === nomer);
+  // row.actMess = false;
+  // console.log('id', row, qwer, nomer);
+  console.log('id', nomer);
+  // dataTable[nomer].actMess = false;
+  // if (row) { onData.updateData(row.actMess = false); }
+  // const aswe = qwer.map((item) => {
+  //   // let rt = {};
+  //   if (item.id === row.id) {
+  //     const rt = item;
+  //     rt.actMess = false;
+  //     console.log('id', item, rt);
+  //     return rt;
+  //   }
+  //   return item;
+  // });
+  // const qwer1 = rows.filter((item) => { item.id === row.id; }); // ищем объект по ID
+  // qwer.actMess = false;
+  // const dateAll = newDate();
+  // // console.log('allll', dateAll);
+  // qwer.date2 = dateAll[0];
+  // qwer.time2 = dateAll[1];
+  // onData.updateData([qwer]);
+  // console.log('addUp', row);
   // const val = onData.tableData.find(item => item.id === i + 1); // ищем объект по ID
   // const store = Store.getState();
   // onData.clearData();
   // onData.addData(store.alarmMess);
   // console.log('112222222222222222222', store );
 };
-export const addRow = (row) => {
+export const valTable = () => onData.getData();
+
+export const addRow = (nomer) => {
+  const dt = newDate(nomer);
   // onData.clearData();
-  onData.addData(row, true);
-  console.log('add', row);
+  const rowWithId = onData.getData();
+  // data[nomer].id = dataTable.length;
+  dataTable.push(data[nomer]);
+  // dataTable[dataTable.length - 1].actMess = false;
+  dataTable[dataTable.length - 1].id = dataTable.length;
+  dataTable[dataTable.length - 1].date = dt[0];
+  dataTable[dataTable.length - 1].time = dt[1];
+  // data[nomer].id = rowWithId.length;
+  // onData.addRow(data[nomer], true);
+  // onData.addData(row, true);
+  console.log('add', data[nomer], 'dataT', dataTable, 'ddd', rowWithId );
 };
-export const valTable = () => {
-  return onData.getData();
-};
+
 
 class Page extends Component {
   constructor(props) {
@@ -167,6 +195,7 @@ class Page extends Component {
       paginationSizeSelector: [3, 6, 8, 10],
       movableColumns: true,
       movableRows: true,
+      reactiveData: true, //turn on data reactivity
     };
     // const messT = this.props.messTable;
 
