@@ -35,7 +35,7 @@ class Page extends Component {
     // onData = this.tabM.table;
     // console.log('this.props.messTable', this.state);
     const options = {
-      height: '292px',
+      height: '700px',
       layout: 'fitColumns',
       pagination: 'local',
       paginationSize: 6,

@@ -7,3 +7,7 @@ body {
   font-family: Arial, Helvetica, Helvetica Neue, serif;
   overflow-y: hidden;
 }
+#App {
+  overflow: auto;
+  height: 100vh;
+}

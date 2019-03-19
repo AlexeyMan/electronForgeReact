@@ -31,7 +31,7 @@ const updRow = (i, state) => {
   (`0${now.getMinutes()}`).slice(-2)}:${
   (`0${now.getSeconds()}`).slice(-2)}`;
   const sortMess = mes.sort((a, b) => b.actMess - a.actMess);
-  console.log('with Rewwwww', sortMess, 'iiiiiiii', i);
+  // console.log('with Rewwwww', sortMess, 'iiiiiiii', i);
 
   sortMess.find((item, index) => {
     if (item.id === (i + 1) && (mes[index].actMess === true)) {
@@ -59,13 +59,13 @@ export default function tableMessage(state = initialState, action) {
   switch (action.type) {
     case 'ADD_MESS':
       const mess = newRow(action.payload);
-      console.log('data', mess, action.payload);
+      // console.log('data', mess, action.payload);
       return [
         mess, ...state,
       ];
     case 'UPD_MESS':
       const updMess = updRow(action.payload, state);
-      console.log('upd', updMess);
+      // console.log('upd', updMess);
       return [...updMess];
     default:
       return state;

@@ -29,10 +29,10 @@ const message = (nId, impM, name) => {
   b.forEach((bit, i) => {
     // console.log('ok', bit, prData[i], i);
     if (bit === 1 && (pr[i] === 0 || pr[i] === undefined)) { // проверяем бит на true
-      console.log('iiiiiiiiii', prData);
+      // console.log('iiiiiiiiii', prData);
       store.dispatch({ type: 'ADD_MESS', payload: i + nId });
     } else if (bit === 0 && pr[i] === 1) {
-      console.log('update this', pr[i]);
+      // console.log('update this', pr[i]);
       store.dispatch({ type: 'UPD_MESS', payload: i + nId });
     }
   });
@@ -58,6 +58,12 @@ rend.on('SEND_DATA_REACT', (event, m) => {
       break;
     default:
       // console.log('default');
+      ok = changing(impM, alaM);
+      if (ok) {
+        store.dispatch({ type: 'ADD_SAVED', payload: m });
+        prData[alaM] = impM;
+      }
+      // console.log('default', m);
       break;
   }
 });

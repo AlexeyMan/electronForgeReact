@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Charts from './Charts';
 // import { createStore } from 'redux';
 // import { Provider } from 'react-redux';
 // import { combineReducers } from 'react-redux';
@@ -8,11 +9,7 @@ import Test from './test';
 // import PumpStation from './pumpStation';
 import PageMessage from './pageMessage';
 // import './station.css';
-// import reducer from './reducers';
 
-// const store = createStore(reducer);
-
-// console.log(store);
 
 export class App extends React.Component {
   render() {
@@ -20,6 +17,7 @@ export class App extends React.Component {
     return (
       <div>
         <AppMenu />
+        <Charts />
         {/* <PumpStation /> */}
         <h2>Welcome to React!</h2>
         <Test />
