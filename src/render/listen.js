@@ -41,7 +41,7 @@ const message = (nId, impM, name) => {
 
 rend.on('SEND_DATA_REACT', (event, m) => {
   const impM = m.dataVal;
-  const alaM = m.name || 'alarm_0';
+  const alaM = m.name;
   // console.log('alamessssss', alaM);
   let ok;
   switch (alaM) {
@@ -56,6 +56,19 @@ rend.on('SEND_DATA_REACT', (event, m) => {
       if (ok) message(16, impM, alaM);
       // console.log('a32', ok);
       break;
+    case 'stationState':
+      ok = changing(impM, alaM);
+      // console.log('default');
+      const status = [];
+      if (ok) {
+        for (let i = 0; i < 32; i += 1) { status[i] = (impM >> i) & 1; } // разбиваем число на массив битов
+        store.dispatch({ type: 'STATION_STATE', payload: status });
+      }
+      break;
+    // case 'FT_freq':
+    //   ok = changing(impM, alaM);
+    //   if (ok) store.dispatch({ type: 'FT_FREQ', payload: impM });
+    //   break;
     default:
       // console.log('default');
       ok = changing(impM, alaM);

@@ -5,6 +5,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import TableMess from './TableMess';
+import Chart from './Charts';
 
 class page extends Component {
   render() {
@@ -23,10 +24,13 @@ class page extends Component {
             </Typography> */}
           </ExpansionPanelDetails>
         </ExpansionPanel>
-        <ExpansionPanel disabled>
+        <ExpansionPanel>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography >Disabled Expansion Panel</Typography>
+            <Typography >Графики</Typography>
           </ExpansionPanelSummary>
+          {/* <ExpansionPanelDetails> */}
+            <Chart />
+          {/* </ExpansionPanelDetails> */}
         </ExpansionPanel>
         {/* <TableMess /> */}
       </div>

@@ -37,7 +37,7 @@ export default function savedData(state = initialState, action) {
     case 'ADD_SAVED':
       const uD = updData(state, action.payload.name, action.payload.dataVal);
       // console.log('uf', action.payload);
-      console.log('ADD_SAVED', state);
+      // console.log('ADD_SAVED', state);
       if (uD === undefined) {
         state = addData(state, action.payload.name, action.payload.dataVal);
         // console.log('undef', state);

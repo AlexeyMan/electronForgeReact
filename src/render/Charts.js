@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import ReactEcharts from 'echarts-for-react';
 import { connect } from 'react-redux';
 
-const list = [];
+// const list = [];
 class Char extends Component {
 
 
@@ -21,7 +21,7 @@ class Char extends Component {
   render() {
     const wert = () => {
 //         // var list = ['11','22', '33'];
-      console.log(this.props.dota[0].data);
+      // console.log(this.props.dota[0].data);
 //         // for (var i = 1; i <= 60; i++) {
 //         //     list.push('2013-03-' + i);
 //         // }
@@ -40,7 +40,7 @@ class Char extends Component {
         },
       },
       legend: {
-        data: ['11', '22'],
+        data: [this.props.dota[0].name, this.props.dota[1].name],
       },
       toolbox: {
         show: true,
@@ -83,7 +83,7 @@ class Char extends Component {
       ],
       series: [
         {
-          name: '11',
+          name: this.props.dota[0].name,
           type: 'line',
           smooth: true,
           data: this.props.dota[0].data,
@@ -96,7 +96,7 @@ class Char extends Component {
                     // }()),
         },
         {
-          name: '22',
+          name: this.props.dota[1].name,
           type: 'line',
           data: this.props.dota[1].data,
         },
@@ -116,17 +116,17 @@ const mapStateToProps = function (state) {
     dota: state.savedData,
   };
 };
-const mapDispatchToProps = function (dispatch, ownProps) {
-  return {
-    addData: (newData) => {
-      dispatch({ type: 'ADD_MESS', payload: newData });
-    },
-    updateData: (newData) => {
-      dispatch({ type: 'UPD_MESS', payload: newData });
-    },
-  };
-};
+// const mapDispatchToProps = function (dispatch, ownProps) {
+  // return {
+  //   addData: (newData) => {
+  //     dispatch({ type: 'ADD_MESS', payload: newData });
+  //   },
+  //   updateData: (newData) => {
+  //     dispatch({ type: 'UPD_MESS', payload: newData });
+  //   },
+  // };
+// };
 export default connect(
         mapStateToProps,
-        mapDispatchToProps,
+        // mapDispatchToProps,
       )(Char);

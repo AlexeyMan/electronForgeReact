@@ -69,23 +69,24 @@ class Page extends Component {
   }
 }
 
+
 const mapStateToProps = function (state) {
   return {
     messTable: state.addMess,
   };
 };
 const mapDispatchToProps = function (dispatch, ownProps) {
-  return {
-    addData: (newData) => {
-      dispatch({ type: 'ADD_MESS', payload: newData });
-    },
-    updateData: (newData) => {
-      dispatch({ type: 'UPD_MESS', payload: newData });
-    },
-  };
+  // return {
+  //   addData: (newData) => {
+  //     dispatch({ type: 'ADD_MESS', payload: newData });
+  //   },
+  //   updateData: (newData) => {
+  //     dispatch({ type: 'UPD_MESS', payload: newData });
+  //   },
+  // };
 };
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  // mapDispatchToProps,
 )(Page);
 

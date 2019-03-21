@@ -25,7 +25,7 @@ const dev = {
       pacet: [
         {
           startRegistr: 1,
-          name: 'p_oil1555555',
+          name: 'stationState',
           description: 'Давление масла',
           unit: 'Bar',
           convertVal: 'readInt16LE',
@@ -35,7 +35,7 @@ const dev = {
           data: [],
         },
         {
-          name: 'RPM2',
+          name: 'FT_freq',
           convertVal: 'readInt16LE',
           startRegistr: 3,
           description: 'Скорость двигателя',
