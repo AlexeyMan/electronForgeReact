@@ -1,5 +1,5 @@
 import { app, BrowserWindow } from 'electron';
-import installExtension, { REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS } from 'electron-devtools-installer';
+// import installExtension, { REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS } from 'electron-devtools-installer';
 import { enableLiveReload } from 'electron-compile';
 import './server/transfer';
 import './server/server';
@@ -46,11 +46,11 @@ const createWindow = async () => {
   // win.loadURL(`file://${__dirname}/menu.html`);
 
   // Open the DevTools.
-  if (isDevMode) {
-    await installExtension(REDUX_DEVTOOLS);
-    await installExtension(REACT_DEVELOPER_TOOLS);
-    mainWindow.webContents.openDevTools();
-  }
+  // if (isDevMode) {
+  //   await installExtension(REDUX_DEVTOOLS);
+  //   await installExtension(REACT_DEVELOPER_TOOLS);
+  //   mainWindow.webContents.openDevTools();
+  // }
 
   // Emitted when the window is closed.
   mainWindow.on('closed', () => {
@@ -66,7 +66,6 @@ const createWindow = async () => {
 // Some APIs can only be used after this event occurs.
 app.on('ready', () => {
   createWindow();
-  
   mainWindow.webContents.on('did-finish-load', () => {
     channelWind(mainWindow);
     // sendMessWind('www');

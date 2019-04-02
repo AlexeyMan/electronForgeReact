@@ -115,7 +115,7 @@ rend.on('SEND_DATA_REACT', (event, message) => {
         // }
       });
       // upDate();
-      console.log('data 1', ok, 'data 2');
+      // console.log('data 1', ok, 'data 2');
     }
   }
 });

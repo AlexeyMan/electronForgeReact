@@ -1,6 +1,6 @@
 const initialState = [
-    { name: 'p_oil1555555', data: [], time: [] },
-    { name: 'RPM2', data: [], time: [] },
+    { name: 'FT_freq', data: [], time: [] },
+    { name: 'RPM7', data: [], time: [] },
 ];
 
 const realTime = () => {

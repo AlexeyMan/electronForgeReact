@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class Station extends Component {
   render() {
     // const st = this.props.realData[0];
-console.log('rdytryrtuyrtuytuy', this.props.realData[0]);
+// console.log('rdytryrtuyrtuytuy', this.props.realData[0]);
     return (
       <div className="mainStation">
         <div className="wrapPump">
@@ -18,7 +18,7 @@ console.log('rdytryrtuyrtuytuy', this.props.realData[0]);
           <img className="imgPipDown" src="render/img/pip.png" alt="pupmp" name="myImage" />
           <h3>{this.props.realData[1]}</h3>
           <div className="viewFT">
-            <span id="viewFT">50 ГЦ</span>
+            <span id="viewFT">{this.props.realData[3] ? this.props.realData[1] : '00' } ГЦ</span>
           </div>
         </div>
         <div className="wrapPump">

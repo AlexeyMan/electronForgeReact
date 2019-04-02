@@ -2,7 +2,7 @@ const initialState = {};
 
 export default function message(state = initialState, action) {
   if (action.type === 'STATION_STATE') {
-    console.log('act11111111111111111111111', state);
+    // console.log('act11111111111111111111111', state);
     return action.payload;
 
     //   alarm001: true,

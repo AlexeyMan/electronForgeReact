@@ -35,11 +35,11 @@ class Page extends Component {
     // onData = this.tabM.table;
     // console.log('this.props.messTable', this.state);
     const options = {
-      height: '700px',
+      height: '300px',
       layout: 'fitColumns',
       pagination: 'local',
-      paginationSize: 6,
-      paginationSizeSelector: [3, 6, 8, 10],
+      paginationSize: 10,
+      paginationSizeSelector: [10, 20, 30, 40],
       movableColumns: true,
       movableRows: true,
     };
@@ -75,7 +75,7 @@ const mapStateToProps = function (state) {
     messTable: state.addMess,
   };
 };
-const mapDispatchToProps = function (dispatch, ownProps) {
+// const mapDispatchToProps = function (dispatch, ownProps) {
   // return {
   //   addData: (newData) => {
   //     dispatch({ type: 'ADD_MESS', payload: newData });
@@ -84,7 +84,7 @@ const mapDispatchToProps = function (dispatch, ownProps) {
   //     dispatch({ type: 'UPD_MESS', payload: newData });
   //   },
   // };
-};
+// };
 export default connect(
   mapStateToProps,
   // mapDispatchToProps,

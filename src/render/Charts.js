@@ -21,7 +21,7 @@ class Char extends Component {
   render() {
     const wert = () => {
 //         // var list = ['11','22', '33'];
-      // console.log(this.props.dota[0].data);
+      console.log(this.props.dota);
 //         // for (var i = 1; i <= 60; i++) {
 //         //     list.push('2013-03-' + i);
 //         // }

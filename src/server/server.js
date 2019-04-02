@@ -135,12 +135,12 @@ const getMeterValue = async (id, cli) => {
         unPack.unPack(arrD[i][a], cli, val, arrCli[i]);
         // задержка между пакетаме
         await sleep(rDevice[i].period);
-        console.log(rDevice[i].slaveId, arrD[i][a].startAddres, val);
+        // console.log(rDevice[i].slaveId, arrD[i][a].startAddres, val);
       }
     }
     // return val;
   } catch (e) {
-    console.log(e);
+    // console.log(e);
   }
 };
 
@@ -154,7 +154,7 @@ const getDataValue = async (ids, cli) => {
       await sleep(50);
     }
   } catch (e) {
-    console.log(e);
+    // console.log(e);
   } finally {
     // after get all data from salve repeate it again
     setImmediate(() => {

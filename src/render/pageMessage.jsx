@@ -29,7 +29,7 @@ class page extends Component {
             <Typography >Графики</Typography>
           </ExpansionPanelSummary>
           {/* <ExpansionPanelDetails> */}
-            <Chart />
+          <Chart />
           {/* </ExpansionPanelDetails> */}
         </ExpansionPanel>
         {/* <TableMess /> */}
