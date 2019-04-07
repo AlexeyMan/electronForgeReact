@@ -30,7 +30,7 @@ function sendMessWind(id, name, dataVal) {
 // for (var i = 0; i < 32; i++)
 //   b[i] = (a >> i) & 1;
 
-//   console.log(b);
+  // console.log(dataVal);
   mainWindow.webContents.send('SEND_DATA_REACT', { id, name, dataVal });
 }
 

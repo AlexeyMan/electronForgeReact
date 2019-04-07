@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { ipcRenderer } from 'electron';
 // import Button from '@material-ui/core/Button';
 import Drawer from '@material-ui/core/Drawer';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -28,7 +30,8 @@ class app extends Component {
       left: false,
     };
     this.toggleDrawer = this.toggleDrawer.bind(this);
-    // this.sendMess = this.sendMess.bind(this);
+    this.startServer = this.startServer.bind(this);
+    this.stopServer = this.stopServer.bind(this);
   }
 
   toggleDrawer() {
@@ -37,8 +40,16 @@ class app extends Component {
       left: status,
     });
   }
-
+  startServer() {
+    console.log('connect');
+    ipcRenderer.send('as-mes', 'ping');
+  }
+  stopServer() {
+    console.log('desconnect');
+    ipcRenderer.send('des', 'piing');
+  }
   render() {
+    const alCount = this.props.alarmCount.filter(item => item.actMess === true).length
     return (
       <div>
         <AppBar position="static">
@@ -57,7 +68,7 @@ class app extends Component {
                 </Badge>
               </IconButton>
               <IconButton color="inherit">
-                <Badge badgeContent={17} color="secondary">
+                <Badge badgeContent={alCount} color="secondary">
                   <NotificationsIcon />
                 </Badge>
               </IconButton>
@@ -94,7 +105,10 @@ class app extends Component {
             <Divider />
             <List component="nav">
               <ListItem button>
-                <ListItemText primary="Trash" />
+                <ListItemText primary="START" onClick={this.startServer} />
+              </ListItem>
+              <ListItem button>
+                <ListItemText primary="STOP" onClick={this.stopServer}  />
               </ListItem>
               {/* <ListItemLink href="#simple-list">
                   <ListItemText primary="Spam" />
@@ -108,4 +122,13 @@ class app extends Component {
     );
   }
 }
-export default app;
+const mapStateToProps = function (state) {
+  return {
+    alarmCount: state.addMess,
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  // mapDispatchToProps,
+)(app);

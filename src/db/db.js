@@ -17,6 +17,7 @@ const pac = Dev.dev;
 // console.log( sendWind);
 db.persistence.setAutocompactionInterval(60000); // сжимаем базу даннух
 async function insertDoc(doc) {
+  // console.log('1111111114',doc[0], doc.length, doc);
   try {
     const docId = doc[0].id;
     db.find({ _id: docId }, (err, num) => {
@@ -29,10 +30,10 @@ async function insertDoc(doc) {
     db.find({ _id: devId }, (err, num) => {
       if (num.length === 0) {
         db.insert(doc, (err, newDoc) => {});
-        // console.log(num, doc);
+        // console.log('111111111', num, doc);
       }
     });
-    console.log(err1);
+    console.log('error1', err1);
   }
 //   await db.remove({ hello: 'worl' }, { multi: true }, (err, numRemoved) => {
 //  // numRemoved = 1
@@ -72,13 +73,14 @@ function choosePacet(type, idP) {
   const nameDe = pacD.map(dev => dev.pacet);
   for (let i = 0; i < nameDe.length; i += 1) {
     for (let a = 0; a < nameDe[i].length; a += 1) {
+      // console.log('packet2', type, idP);
       nameDe[i][a].id = idP;
       delete nameDe[i][a].startReg;
       delete nameDe[i][a].convert;
       delete nameDe[i][a].relation;
       // delete nameDe[i][a].range;
       pacet = pacet.concat(nameDe[i][a]);
-      // console.log(pacet);
+      // console.log('packet', pacet);
     }
   }
   insertDoc(pacet);
@@ -86,6 +88,7 @@ function choosePacet(type, idP) {
 }
 function creatDocConn(conn, dev, pacD) {
   let doc;
+  // console.log('conn, dev,', conn, dev,);
   for (let i = 0; i < dev.length; i += 1) {
     doc = {
       _id: `${dev[i].deviceId}`,

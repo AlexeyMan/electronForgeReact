@@ -31,10 +31,10 @@ class test extends Component {
         <Button onClick={this.desClick} color="secondary">desconnect</Button>
         <Button onClick={this.desClick} variant="contained" color="default">desconnect</Button>
         {/* <img src="render/img/pump.png" name="myImage" width="100" /> */}
-        <div id="p_oil1">send</div>
+        {/* <div id="p_oil1">send</div>
         <div id="p_oil4">send</div>
         <div id="RPM5">send</div>
-        <div id="p_oilPN8">send</div>
+        <div id="p_oilPN8">send</div> */}
       </div>
     );
   }

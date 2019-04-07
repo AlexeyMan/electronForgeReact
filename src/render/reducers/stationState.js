@@ -1,4 +1,6 @@
-const initialState = {};
+const initialState = {
+  // station: [],
+};
 
 export default function message(state = initialState, action) {
   if (action.type === 'STATION_STATE') {

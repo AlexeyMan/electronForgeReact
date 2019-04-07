@@ -5,7 +5,7 @@
        {
          deviceId: 'nomer1',
          slaveId: 11,
-         typeD: 'PN',
+         typeD: 'pump1',
          Conn: 'COM',
          period: '100',
          nameConn: 'COM1',
@@ -22,7 +22,7 @@
        {
          deviceId: 'nomer3',
          slaveId: 3,
-         typeD: 'PN',
+         typeD: 'pump1',
          Conn: 'COM',
          interval: '50',
          period: '50',

@@ -56,7 +56,7 @@ class Page extends Component {
     // paginationSizeSelector={[3, 6, 8, 10]}
     // movableColumns={true}
           options={options}
-          data={messT} // {this.props.messTable}
+          data= {[]}// {messT} // {this.props.messTable}
           columns={columns}
           tooltips
           layout={'fitData'}

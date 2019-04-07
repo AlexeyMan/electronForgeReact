@@ -3,11 +3,11 @@
   font-size: 20px;
 }
 .mainStation {
-  margin-top: 10px;
+  padding: 35px;
   height: 350px;
   margin-left: auto;
   margin-right: auto;
-   width: 350px;
+  width: 640px;
 }
 .mainStation .wrapPump {
   float: left;
@@ -39,7 +39,7 @@
   z-index: 7;
   position: absolute;
   right: 30px;
-  top: -9px;
+  top: -10px;
 }
 .mainStation .wrapPump .viewFT {
   background-color: #004D4D;

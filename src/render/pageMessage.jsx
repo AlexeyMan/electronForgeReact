@@ -11,7 +11,7 @@ class page extends Component {
   render() {
     return (
       <div className="mainPage">
-        <ExpansionPanel>
+        <ExpansionPanel >
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography>Журнал состояний</Typography>
           </ExpansionPanelSummary>
@@ -24,7 +24,7 @@ class page extends Component {
             </Typography> */}
           </ExpansionPanelDetails>
         </ExpansionPanel>
-        <ExpansionPanel>
+        <ExpansionPanel >
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <Typography >Графики</Typography>
           </ExpansionPanelSummary>

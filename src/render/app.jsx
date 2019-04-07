@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 // import { Provider } from 'react-redux';
 // import { combineReducers } from 'react-redux';
 import AppMenu from './AppMenu';
-import Test from './test';
+// import Test from './test';
 import PumpStation from './pumpStation';
 import PageMessage from './pageMessage';
 // import './station.css';
@@ -19,8 +19,8 @@ export class App extends React.Component {
         <AppMenu />
         {/* <Charts /> */}
         <PumpStation />
-        <h2>Welcome to React!</h2>
-        <Test />
+        {/* <h2>Welcome to React!</h2> */}
+        {/* <Test /> */}
         <PageMessage />
       </div>
     );

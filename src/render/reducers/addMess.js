@@ -31,7 +31,8 @@ const updRow = (i, state) => {
   (`0${now.getMinutes()}`).slice(-2)}:${
   (`0${now.getSeconds()}`).slice(-2)}`;
   const sortMess = mes.sort((a, b) => b.actMess - a.actMess);
-  // console.log('with Rewwwww', sortMess, 'iiiiiiii', i);
+  // store.dispatch({ type: 'COUNT_ALARM', payload: sortMess.length });
+  //  console.log('with Rewwwww', sortMess, 'iiiiiiii', i);
 
   sortMess.find((item, index) => {
     if (item.id === (i + 1) && (mes[index].actMess === true)) {

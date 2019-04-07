@@ -1,5 +1,5 @@
 const dev = {
-  PW: [
+  pump1: [
     {
       startAddres: '1',
       Nregistrs: '2',
@@ -19,14 +19,14 @@ const dev = {
       ],
     },
     {
-      startAddres: '50',
+      startAddres: '3',
       Nregistrs: '8',
       functionQuery: 3,
       pacet: [
         {
           startRegistr: 1,
           name: 'stationState',
-          description: 'Давление масла',
+          description: 'Сосотояние станции',
           unit: 'Bar',
           convertVal: 'readInt16LE',
           relation: 'convertData * 2',
@@ -35,16 +35,16 @@ const dev = {
           data: [],
         },
         {
+          startRegistr: 3,
           name: 'FT_freq',
           convertVal: 'readInt16LE',
-          startRegistr: 3,
-          description: 'Скорость двигателя',
+          description: 'Частота ЧП',
           data: [],
         },
         {
+          startRegistr: 5,
           name: 'RPM3',
           convertVal: 'readInt16LE',
-          startRegistr: 5,
           description: 'Скорость двигателя',
           data: [],
         },
@@ -74,7 +74,6 @@ const dev = {
     {
       startAddres: '44',
       Nregistrs: '4',
-      typeD: 'PW',
       functionQuery: 3,
       pacet: [
         {
@@ -94,7 +93,7 @@ const dev = {
       ],
     },
   ],
-  PN: [
+  PW: [
     {
       startAddres: '100',
       Nregistrs: '4',

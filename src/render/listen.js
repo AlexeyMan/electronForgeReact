@@ -62,7 +62,7 @@ rend.on('SEND_DATA_REACT', (event, m) => {
       const status = [];
       if (ok) {
         for (let i = 0; i < 32; i += 1) { status[i] = (impM >> i) & 1; } // разбиваем число на массив битов
-        store.dispatch({ type: 'STATION_STATE', payload: status });
+        store.dispatch({ type: 'STATION_STATE', payload: status }); // масив бит для отображения состояния
       }
       break;
     // case 'FT_freq':
@@ -73,10 +73,10 @@ rend.on('SEND_DATA_REACT', (event, m) => {
       // console.log('default');
       ok = changing(impM, alaM);
       if (ok) {
-        store.dispatch({ type: 'ADD_SAVED', payload: m });
+        store.dispatch({ type: 'ADD_SAVED', payload: m }); // по умолчанию сохраням данные
         prData[alaM] = impM;
       }
-      // console.log('default', m);
+      //  console.log('default', m,impM,alaM, "rtrtrtr", predMess );
       break;
   }
 });

@@ -146,6 +146,7 @@ const getMeterValue = async (id, cli) => {
 
 // let conPackDevTcp;
 const getDataValue = async (ids, cli) => {
+  // console.log('qwertrewqq',ids);
   try {
     // выбираем слайвы
     for (const id of ids) {
@@ -180,7 +181,8 @@ function connectTcp(i) {
       const conPack = chooseDev(i);
       return conPack;
     }).then((conPack) => {
-      db.creatDocConn(Conn[i], conPack, DevPac);
+      // console.log('qwertrewqq',Conn, conPack);
+      db.creatDocConn(Conn[i], conPack, DevPac); // пишем в ДБ
       getDataValue(conPack, i);
     })
     .catch((e) => {
@@ -209,7 +211,7 @@ function connectRTU(i) {
       getDataValue(conPack, i);
     })
     .catch((e) => {
-      console.log(e.message);
+      console.log('catch', e.message);
       setTimeout(() => {
         rerun(i);
       }, 10000);
