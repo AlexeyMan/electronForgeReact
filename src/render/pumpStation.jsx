@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Moddd from './modalWind';
 
 class Station extends Component {
   render() {
@@ -7,6 +8,7 @@ class Station extends Component {
 // console.log('rdytryrtuyrtuytuy', this.props.realData[0]);
     return (
       <div className="mainStation">
+      <Moddd />
         <div className="wrapPump">
           <img className="imgPump" src="render/img/pump.png" alt="pupmp" name="myImage" />
           <img className="imgPumpRezerv" style={{ display: this.props.realData[1] ? 'block' : 'none' }} src="render/img/rezerv.png" alt="pupmp" name="myImage" />
